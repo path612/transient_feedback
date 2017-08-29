@@ -1,0 +1,102 @@
+<html >
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>WiseHq
+</title>
+
+</head>
+<body>	
+
+
+	<script type="text/javascript" src="\feed_back.js"></script>
+	<script type="text/javascript" src="\feedback_intercept.js"></script>
+
+
+
+	<script type="text/javascript">
+		var contextPath='   ';        //call the url on which form to be submitted
+		function getUserLoginId(){
+		return '';
+		}
+	</script>
+
+	<link rel="stylesheet" href="\feedBack_intercept.css"  type="text/css">
+	<div class="btnFeedback transition" onclick="openFeedBackForm(this);">FEEDBACK</div>
+	<div class="srpFeedback transition">
+	<div class="feedbackTitle">
+	<span>Feedback</span>
+	<span class="closeFeedback" onclick="submitFeedback(true);">X</span>
+	</div>
+	<div class="f_bigIconSec">
+	<span id="f_bigIcon" class="f_bigIcon f_defaultIcon"></span>
+	</div>
+	<div class="f_formSection transition ">
+	<div class="f_userSelectForm">
+	<div class="f_heading" style="display:block;">
+	Hey, how was your <span>experience?</span>
+	</div>
+	<input type="hidden" id="selectedFeedback" value="3">
+	<div class="userSelection">
+	<div class="userSelectRow" onclick="feedbackSelect(this, 'f_bigIcon iconAwesomeBig', 'f_headingAwesome')">
+	<div class="f_checkBox"></div>
+	<div class="f_selectTitle bgAwesome">Awesome</div>
+	<div class="f_s_icon iconAwesome"></div>
+	<div class="clearAll"></div>
+	</div>
+	<div class="userSelectRow" onclick="feedbackSelect(this, 'f_bigIcon iconGoodBig', 'f_headingGood')">
+	<div class="f_checkBox"></div>
+	<div class="f_selectTitle bgGood">Good</div>
+	<div class="f_s_icon iconGood"></div>
+	<div class="clearAll"></div>
+	</div>
+	<div class="userSelectRow" onclick="feedbackSelect(this, 'f_bigIcon iconImprovBig', 'f_headingImprov')">
+	<div class="f_checkBox"></div>
+	<div class="f_selectTitle bgImprov">Needs Improvement</div>
+	<div class="f_s_icon iconImprov"></div>
+	<!-- <div class="clearAll"></div> -->
+	</div>
+	</div>
+	<!-- <div class="clearAll"></div> -->
+	</div>
+	<div class="f_userFillForm">
+	<div class="f_heading" id="f_headingAwesome" style="display: block;">
+	<span>Thank you</span> for your <span>feedback!</span>
+	</div>
+	<div class="f_heading" id="f_headingGood" style="display: none;">
+	<span>Thank you</span> for your <span>feedback!</span>
+	</div>
+	<div class="f_heading" id="f_headingImprov" style="display: none;">
+	<span>Oops! We're sorry.</span>
+	</div>
+	<div class="userFillFormSec">
+	<div class="f_fillField">
+	<textarea id="feedbackText" maxlength="1000" class="f_textArea" placeholder="Want to share more? Please do!"></textarea>
+	<div class="formErrRel">
+	<div class="formErr" id="feedbackTextError" style="display: none;">
+	<span class="formErrArrow"></span>
+	<p></p>
+	</div>
+	</div>
+	</div>
+	<div class="f_fillField">
+	<input class="f_inputText" id="feedbackEmail" placeholder="Share your email id" type="text">
+	<div class="formErrRel">
+	<div class="formErr" id="feedbackEmailError" style="display: none;">
+	<span class="formErrArrow"></span>
+	<p></p>
+	</div>
+	</div>
+	</div>
+	<div class="f_btnSection">
+	<span class="f_btnSubmit" onclick="submitFeedback(false);">SUBMIT</span>
+	<span class="f_btnThanks" onclick="submitFeedback(true);">NO Thanks</span>
+	</div>
+	</div>
+	<div class="clearAll"></div>
+	</div>
+	</div>
+	</div>
+</body>
+</html>
